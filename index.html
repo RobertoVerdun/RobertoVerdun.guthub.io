@@ -45,6 +45,16 @@
             margin-bottom: 4rem;
             border-left: 6px solid #6d28d9;
         }
+        /* Estilo opcional para tu foto de perfil si decides agregarla */
+        .profile-img {
+            display: block;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
         .about-section h2 {
             color: #1e293b;
             margin-top: 0;
@@ -106,19 +116,36 @@
         }
         .card {
             background: white;
-            padding: 2.5rem;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-            border-top: 5px solid #6d28d9;
             transition: transform 0.3s ease;
+            overflow: hidden; /* Para que la foto se adapte a los bordes redondeados */
+            display: flex;
+            flex-direction: column;
         }
         .card:hover {
             transform: translateY(-5px);
+        }
+        /* Estilo para las fotos de las tarjetas */
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover; /* Recorta la foto proporcionalmente para que encaje perfecto */
+        }
+        .card-body {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
         .card h3 {
             margin-top: 0;
             color: #4c1d95;
             font-size: 1.4rem;
+        }
+        .card p {
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
         }
         .btn {
             display: inline-block;
@@ -127,9 +154,9 @@
             padding: 0.7rem 1.5rem;
             text-decoration: none;
             border-radius: 6px;
-            margin-top: 1rem;
             font-weight: 500;
             transition: background 0.3s;
+            text-align: center;
         }
         .btn:hover {
             background: #4c1d95;
@@ -161,6 +188,9 @@
         
         <!-- Sección Sobre Mí -->
         <div class="about-section">
+            <!-- OPCIONAL: Descomenta la línea de abajo si subes tu foto de perfil quitando los caracteres "<!--" -->
+            <!-- <img src="roberto.jpg" alt="Roberto Tomás Verdún" class="profile-img"> -->
+            
             <h2>Sobre mí</h2>
             <p>A lo largo de mi vida he aprendido que la comunicación y la sanación viajan por el mismo camino: el de la escucha atenta y la empatía profunda. Como <strong>docente y periodista</strong>, dedico mi día a día a informar con la verdad, educar con el ejemplo y analizar la realidad con estructura y responsabilidad.</p>
             <p>Sin embargo, mi vocación va más allá de lo visible. Como <strong>médium evidencial</strong> (tanto de humanos como de animales) y <strong>Maestro de Registros Akáshicos y Reiki</strong>, actúo como un puente entre dimensiones para traer mensajes de paz, cierre y alivio. Mi formación con diplomados en <strong>asistencia psicológica en duelo y pérdida</strong>, sumada a mi especialización en <strong>biodecodificación y vidas pasadas</strong>, me permite acompañar a las personas en sus procesos más profundos de dolor, ayudándolas a comprender el origen de sus bloqueos y a evolucionar espiritualmente.</p>
@@ -193,9 +223,11 @@
                 
                 <p>Tal vez la eternidad absoluta volvería insignificante cada abrazo. Porque lo limitado adquiere valor. Una canción emociona porque termina. Una infancia conmueve porque desaparece. Una mascota deja huellas porque su tiempo es breve. Una vida importa porque no dura para siempre.</p>
                 
+                <p>
                 <div class="blockquote">Toda pérdida tiene un mensaje brutal: si duele tanto es porque hubo amor verdadero. El duelo es amor que ya no tiene dónde ir.</div>
+                </p>
                 
-                <p>Por eso algunas personas sienten presencia de sus seres queridos después de morir. Otros sueñan con ellos. Otros hablan con ellos internamente. Otros sienten señales. La ciencia puede explicar algunas experiencias psicológicamente; otras siguen siendo discutidas incluso entre investigadores de conciencia y experiencias cercanas a la muerte.</p>
+                <p>Por eso algunas personas sienten presencia de sus seres queridos después de morir. Others sueñan con ellos. Otros hablan con ellos internamente. Otros sienten señales. La ciencia puede explicar algunas experiencias psicológicamente; otras siguen siendo discutidas incluso entre investigadores de conciencia y experiencias cercanas a la muerte.</p>
                 
                 <p>Más allá de cualquier creencia, hay algo real: los muertos continúan viviendo dentro de quienes los recuerdan. Un padre vive en frases que repetimos (se llama psicomagia). Una madre vive en gestos heredados. Un animal amado vive en hábitos cotidianos que nunca desaparecen. La muerte física puede detener un cuerpo. No siempre logra detener la influencia de un ser.</p>
                 
@@ -219,28 +251,43 @@
                 <p>Y quizá la enseñanza más difícil sea esta: La muerte no vino únicamente a quitar vidas. Vino a recordarnos que todavía estamos vivos. Siempre será más fácil ver la pérdida y el duelo desde la mediumnidad evidencial. Todos podemos ser médiums, todos nos comunicamos en algún momento con nuestros seres queridos muertos. Lo importante es aprender a callar el ruido y poder escuchar los mensajes de nuestros seres amados.</p>
                 
                 <p style="font-weight: bold; margin-top: 2rem; color: #4c1d95;">Buena vida.</p>
-    
-        
+            </div>
+        </div>
 
         <h2 style="text-align: center; color: #1e293b; font-weight: 500; margin-top: 4rem;">Explora mis Espacios</h2>
         
         <div class="grid">
+            <!-- Tarjeta 1 -->
             <div class="card">
-                <h3>📰 Letras y Crónicas</h3>
-                <p>Artículos periodísticos, editoriales de opinión y novedades sobre bienestar integral, cuidado personal y evolución holística. Información con consciencia.</p>
-                <a href="#" class="btn">Leer Publicaciones</a>
+                <!-- Cambia "cronicas.jpg" por el nombre de la foto que subas para esta sección -->
+                <img src="cronicas.jpg" alt="Letras y Crónicas" class="card-img">
+                <div class="card-body">
+                    <h3>📰 Letras y Crónicas</h3>
+                    <p>Artículos periodísticos, editoriales de opinión y novedades sobre bienestar integral, cuidado personal y evolución holística. Información con consciencia.</p>
+                    <a href="#" class="btn">Leer Publicaciones</a>
+                </div>
             </div>
 
+            <!-- Tarjeta 2 -->
             <div class="card">
-                <h3>✨ Consultas y Sanación</h3>
-                <p>Sesiones de mediumnidad evidencial (humana y animal), lecturas de Registros Akáshicos, biodecodificación y asistencia compasiva en procesos de duelo.</p>
-                <a href="#" class="btn">Ver Servicios</a>
+                <!-- Cambia "sanacion.jpg" por el nombre de la foto que subas para esta sección -->
+                <img src="sanacion.jpg" alt="Consultas y Sanación" class="card-img">
+                <div class="card-body">
+                    <h3>✨ Consultas y Sanación</h3>
+                    <p>Sesiones de mediumnidad evidencial (humana y animal), lecturas de Registros Akáshicos, biodecodificación y asistencia compasiva en procesos de duelo.</p>
+                    <a href="#" class="btn">Ver Servicios</a>
+                </div>
             </div>
 
+            <!-- Tarjeta 3 -->
             <div class="card">
-                <h3>💬 Comunidad e Interacción</h3>
-                <p>¿Quieres agendar una sesión, dejar tu testimonio sobre nuestra experiencia o proponer una colaboración? Estoy aquí para escucharte.</p>
-                <a href="https://wa.me/5493704302358?text=Hola%20Roberto,%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n." target="_blank" class="btn btn-wsp">Escríbeme por WhatsApp</a>
+                <!-- Cambia "comunidad.jpg" por el nombre de la foto que subas para esta sección -->
+                <img src="comunidad.jpg" alt="Comunidad e Interacción" class="card-img">
+                <div class="card-body">
+                    <h3>💬 Comunidad e Interacción</h3>
+                    <p>¿Quieres agendar una sesión, dejar tu testimonio sobre nuestra experiencia o proponer una colaboración? Estoy aquí para escucharte.</p>
+                    <a href="https://wa.me/5493704302358?text=Hola%20Roberto,%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n." target="_blank" class="btn btn-wsp">Escríbeme por WhatsApp</a>
+                </div>
             </div>
         </div>
     </div>
